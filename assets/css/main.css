@@ -2125,11 +2125,11 @@
 		.image.featured {
 			display: block;
 			margin: 0 0 3em 0;
-			width: 100%;
+			width: 80%;
 		}
 
 			.image.featured img {
-				width: 100%;
+				width: 80%;
 			}
 
 			@media screen and (max-width: 736px) {
