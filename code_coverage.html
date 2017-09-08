@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+    Future Imperfect by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Code coverage</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+    <body class="single">
+        <!-- Wrapper -->
+            <div id="wrapper">
+                <!-- Header -->
+                    <header id="header">
+                        <h1><a href="index.html">QA BackEnd Notes</a></h1>
+                    </header>
+                <!-- Menu -->
+                    <section id="menu">
+                        <!-- Actions -->
+                        <section></section>
+                    </section>
+                <!-- Main -->
+                    <div id="main">
+                        <!-- Post -->
+                        <article class="post">
+                            <header>
+                                <div class="title">
+                                    <h2><a href="#">Code coverage</a></h2>
+                                    <p>Code coverage is popular metrics. Let's see what is the metric and how it can be useful to us.</p>
+                                </div>
+                                <div class="meta">
+                                    <time class="published" datetime="2017-05-21">May 21, 2017</time>
+                                    <a href="#" class="author"><span class="name">Sergey Larionov</span><img src="images/avatar.jpg" alt="" /></a>
+                                </div>
+                            </header>
+                                <span class="image featured"><img src="images/code_coverage.png" alt="" /></span>
+                                <h1>Introduction</h1>
+                                <p>Eventually each engineer faces with the situation, when he needs to evaluate quality of the tests. Different metrics can be used for test evaluation. Code coverage is one of the most popular and important metrics.</p>
+                                <h1>What is the Code Coverage?</h1>
+                                <p>Code Coverage will tell you, how much of the code you exercised by running your tests. What does it mean? Let's see the simple example.</p>
+                                <p>There is some code, which you should test. And there is a set of tests, which should evaluate/check this code. The code consists of classes, functions, conditions and, in the end, the variables.
+                                   Code coverage metric shows you, which classes, functions, conditions and variables of the code have been used during execution of set of tests.</p>
+                                <p>The percentage of the code’s used lines is called code coverage. As a rule code coverage is calculated using unit, functional, integration tests. Using all these types of tests gives us a complete picture of code coverage.</p>
+                                <h1>Benefits of using metric of code coverage.</h1>
+                                <ul>
+                                    <li>With this metric QA Engineer can always understand, which parts of the code were not checked/tested.</li>
+                                    <li>Code coverage metric allows to tracki that nothing is missed after integration of new branches of the code.</li>
+                                    <li>The metric prevents a situation, when we can release a new version of the product with untested parts of the code. This is the most significant benefit.</li>
+                                </ul>
+                                <p>It is important to understand, that 100% of code coverage does not mean, that your product will be fully checked and tested.
+                                   Code coverage is just one of metrics for checking the quality of tests. But there is interesting statistics of the quantity of bug-fixes for covered and uncovered program element:</p>
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Covered</th>
+                                        <th>Uncovered</th>
+                                    </tr>
+                                    <tr><td>Statement</td><td>0.68</td><td>1.20</td></tr>
+                                    <tr><td>Block</td><td>0.42</td><td>0.83</td></tr>
+                                    <tr><td>Method</td><td>0.40</td><td>0.87</td></tr>
+                                </table>
+                                <h1>Code coverage types</h1>
+                                <ul>
+                                    <li><b>Statement coverage.</b>  It is a basic form of the code coverage. A statement is covered, if it is executed.</li>
+                                    <li><b>Branch coverage.</b>The goal of the branch coverage is to ensure, that whenever a program can jump, it jumps to all possible destinations.</li>
+                                    <li><b>Path coverage.</b> The purpose of path coverage is to ensure, that all paths through the program are taken.</li>
+                                    <li><b>Condition coverage.</b>When a Boolean expression is evaluated, it can be useful to ensure, that all the terms in the expression are exercised.</li>
+                                </ul>
+                                <p>The type of the code coverage, that you need, depends on the goal and accessibility of code or component.
+                                    The statement coverage is the most used type of code coverage, because it is the only type, that shows detailed information of the coverage.</p>
+                                <h1>Which code cannot be covered?</h1>
+                                <p>The following types of code cannot be covered with tests:</p>
+                                    <ul>
+                                        <li><b>initializing scripts;</b></li>
+                                        <li><b>configuration files;</b></li>
+                                        <li><b>upgrade scripts;</b></li>
+                                        <li><b>environment specific files;</b></li>
+                                        <li><b>blocks of code that aren’t in production;</b></li>
+                                    </ul>
+                                <p>The types of code, mentioned above, should be checked manually during the deployment process on DEV, QA environments.
+                                   Also it's important to mention the blocks of obsolete code: in case a code block will be deployed to production, it must be covered, even if it's the obsolete code.</p>
+                                <h1>What percentage of code coverage is considered to be enough?</h1>
+                                <p>From the point of view, that there are always files, that can't be tested or must not be tested (we talked about it in the previous item) we can consider, that a good code coverage is 80% and above.</p>
+                                <p>There are examples of code coverage for projects (C, Python, JavaScript, Go) with open source code on GitHub:</p>
+                                <p>
+                                    <a class="external-link" href="https://coveralls.io/r/tornadoweb/tornado" rel="nofollow">
+                                        <span class="confluence-embedded-file-wrapper">
+                                            <img class="confluence-embedded-image confluence-external-resource" alt="Badge" src="https://coveralls.io/repos/tornadoweb/tornado/badge.svg?branch=master" data-image-src="https://coveralls.io/repos/tornadoweb/tornado/badge.svg?branch=master">
+                                        </span>
+                                    </a>
+                                    </span><a class="external-link" href="https://github.com/tornadoweb/tornado" rel="nofollow">FACEBOOK TORNADO</a>
+                                </p>
+                                <p>
+                                    <a class="external-link" href="https://coveralls.io/r/divio/django-cms" rel="nofollow">
+                                        <span class="confluence-embedded-file-wrapper">
+                                            <img class="confluence-embedded-image confluence-external-resource" alt="Badge" src="https://coveralls.io/repos/divio/django-cms/badge.svg?branch=develop" data-image-src="https://coveralls.io/repos/divio/django-cms/badge.svg?branch=develop">
+                                        </span>
+                                    </a>
+                                    <span style="color: rgb(53,74,87);">&nbsp;</span>
+                                    <a class="external-link" href="https://github.com/divio/django-cms" rel="nofollow">DJANGO CMS</a>
+                                </p>
+                                <p>
+                                    <a class="external-link" href="https://coveralls.io/github/facebook/react" rel="nofollow">
+                                        <span class="confluence-embedded-file-wrapper">
+                                            <img class="confluence-embedded-image confluence-external-resource" alt="Badge" src="https://coveralls.io/repos/facebook/react/badge.svg?branch=master&amp;service=github" data-image-src="https://coveralls.io/repos/facebook/react/badge.svg?branch=master&amp;service=github">
+                                        </span>
+                                    </a>
+                                    <span style="color: rgb(53,74,87);">&nbsp;</span>
+                                    <a class="external-link" href="https://github.com/facebook/react" rel="nofollow">REACT</a>
+                                </p>
+                                <p>
+                                    <a class="external-link" href="https://coveralls.io/r/mattn/go-v8" rel="nofollow">
+                                        <span class="confluence-embedded-file-wrapper">
+                                            <img class="confluence-embedded-image confluence-external-resource" alt="Badge" src="https://coveralls.io/repos/mattn/go-v8/badge.svg?branch=HEAD" data-image-src="https://coveralls.io/repos/mattn/go-v8/badge.svg?branch=HEAD">
+                                        </span>
+                                    </a>
+                                    <span style="color: rgb(53,74,87);">&nbsp;</span>
+                                    <a class="external-link" href="https://github.com/mattn/go-v8" rel="nofollow">GO-V8</a>
+                                </p>
+                                <p>
+                                    <a class="external-link" href="https://coveralls.io/r/mozilla/funfactory" rel="nofollow">
+                                    <span class="confluence-embedded-file-wrapper">
+                                        <img class="confluence-embedded-image confluence-external-resource" alt="Badge" src="https://coveralls.io/repos/mozilla/funfactory/badge.svg?branch=master" data-image-src="https://coveralls.io/repos/mozilla/funfactory/badge.svg?branch=master">
+                                    </span>
+                                    </a>
+                                    <span style="color: rgb(53,74,87);">&nbsp;</span>
+                                    <a class="external-link" href="https://github.com/mozilla/funfactory" rel="nofollow">MOZILLA FUNFACTORY</a>
+                                </p>
+                                <h1>How often do we need to recalculate the code coverage?</h1>
+                                <p>Code coverage can be a part of the continuous integration process. But in some systems such procedure increases the time of build process significantly.
+                                   In such cases we need to tune trigger to recalculate code coverage. For example, one of the most popular pattern is to get code coverage in case, when a new feature has been merged to the branch with the main code base.
+                                </p>
+                                <h1>Multi-component product</h1>
+                                <p>Usually in case with multi-component product we don't have possibility to get code coverage for the whole system.
+                                   In such situation we should separate product into smaller logical parts and get code coverage metric for each small part.
+                                   There is one more interesting situation: when we have components of our solution, that are created by developers from other team, other company.
+                                   At the beginning we need to exclude such parts of the solution from the process of getting code coverage and pay attention to the components, which have been created by our Team
+                                    (as we need to ensure high quality and high coverage of code of our Team firstly).
+                                </p>
+                                <h1>Recommendations</h1>
+                                <ul>
+                                    <li>Do not be afraid to consider code coverage.</li>
+                                    <li>If you don't have access to all parts of the code, it is OK. You can start to get code coverage for available parts of the code.</li>
+                                    <li>First of all you should save successful result of code coverage. The result must be the lower bound of the code coverage: so we need to increase this metric in future, but never fall below it.</li>
+                                    <li>Code coverage should be calculated when running all types of tests: unit, functional, integration tests.</li>
+                                    <li>You should discuss with your developers, which parts of the code were not covered/tested. It is useful and productive for developers and QA engineers.</li>
+                                </ul>
+                                <footer>
+                                    <ul class="stats"></ul>
+                                </footer>
+                            </article>
+                    </div>
+
+                    <!-- Footer -->
+                    <section id="footer">
+                        <ul class="icons">
+                            <li><a href="http://twitter.com/sergunyaa" class="fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://www.instagram.com/sergey_larionov/" class="fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="mailto:sergunya@outlook.com" class="fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                        <p class="copyright">&copy; Sergey Larionov </p>
+                    </section>
+            </div>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
